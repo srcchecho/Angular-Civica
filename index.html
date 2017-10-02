@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html ng-app="app" ng-controller="main">
+    <head>
+        <meta charset="utf-8">
+        <title>Angular JS</title>
+        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimal-ui" />
+        <link rel="stylesheet" type="text/css" href="style.css" />
+        <link rel="stylesheet" type="text/css" href="assets/css/animate.css" />
+        
+        <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/angular_material/1.1.0/angular-material.min.css">
+        <link href="https://fonts.googleapis.com/css?family=PT+Sans+Narrow" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Work+Sans:200" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Montserrat+Subrayada" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Squada+One" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300" rel="stylesheet">
+        <link href="scripts/lib/angular-jk-carousel-master/dist/jk-carousel.css" rel="stylesheet" type="text/css" />
+        <link rel="stylesheet" href="angular-1.6.4/map.css">
+        
+        <script src="angular-1.6.4/angular.min.js"></script>
+        <script src="angular-1.6.4/angular-aria.min.js"></script>
+        <script src="angular-1.6.4/angular-animate.min.js"></script>
+        <script src="angular-1.6.4/angular-route.js"></script>
+        <script src="angular-1.6.4/jk-carousel.js"></script>
+        <!--<script src="controllers/controllerAlumno.js"></script>-->
+        <!-- Librerias Civica -->
+        <script src="js/lib/civica/cv-util.js"></script>
+        <script src="js/lib/civica/cv-controller.js"></script>
+        <script src="js/lib/civica/cv-seguridad.js"></script>
+        <script src="js/lib/civica/cv-directive.js"></script>
+
+        <script src="http://ajax.googleapis.com/ajax/libs/angular_material/1.1.0/angular-material.min.js"></script>
+        <script src="js/components/base/service-base.js"></script>
+        <script src="js/lib/civica/cv-controller.js"></script>
+        <script src="js/components/controllers/cvPruebasBaseController.js"></script>
+		<script src="js/components/controllers/cvController.js"></script>
+		<script src="js/components/controllers/indexController.js"></script>
+        <script src="js/components/controllers/main.js"></script>
+        <script src="js/components/controllers/navController.js"></script>
+        <script src="js/components/controllers/homeCtrl.js"></script>
+        <script src="js/components/controllers/aboutCtrl.js"></script>
+        <script src="js/components/controllers/contactCtrl.js"></script>
+        <script src="assets/dist/wow.min.js"></script>
+        <script src="http://maps.googleapis.com/maps/api/js?language=en&key=AIzaSyAEsZP358NHvnV41ykuYxUkcXA4SAGxjQY"></script>
+              <script>
+              new WOW().init();
+              </script>
+        <script src="js/components/services/servicioAlbums.js"></script>
+        <script src="js/components/modules/app.js"></script>
+    </head>
+    <body ng-cloak ng-controller="navController">
+    <md-toolbar hide show-gt-sm class="md-hue-2 navbar">
+        <md-nav-bar class="md-toolbar-tools" aria-label="navbar">
+            <div>
+                <img flex class="logo" src="img/civica_logo.gif" name="page1" ng-click="vm.navegar('')"> 
+            </div>
+            <div class="navegacion">
+            <md-nav-item md-nav-click="vm.navegar('')" name="page1" class="md-icon-button">
+                Inicio
+            </md-nav-item>
+            <md-nav-item md-nav-click="vm.navegar('about')" name="page2" class="md-icon-button">
+                Civica
+            </md-nav-item>
+            <md-nav-item md-nav-click="vm.navegar('servicios')" name="page3" class="md-icon-button">
+                Servicios
+            </md-nav-item>
+            <md-nav-item md-nav-click="vm.navegar('portafolio')" name="page3" class="md-icon-button">
+                Portafolio
+            </md-nav-item>
+            <md-nav-item md-nav-click="vm.navegar('contact')" name="page3" class="md-icon-button">
+                Contacto
+            </md-nav-item>
+            </div>
+        </md-nav-bar>
+    </md-toolbar>
+
+        <div hide show-sm show-xs layout="column" ng-cloak>
+            <md-toolbar class="md-hue-2 navigationbar">
+            <div class="md-toolbar-tools navRp">
+                <img flex="65" class="logorp" src="img/civica_logo.gif" ng-click="vm.navegar('')">
+                <md-button class="md-icon-button menubtn" ng-click="abrir()" aria-label="navmenu">
+                    <md-icon md-svg-icon="img/icons/menu.svg"></md-icon>
+                </md-button>
+            </div>
+            </md-toolbar>
+
+        <md-sidenav md-component-id="left" class="md-sidenav-right" layout="column">
+            <md-toolbar class="md-theme-indigo" layout-align="center start">
+                <img flex="70" class="sidelogo" src="img/logo.png">
+            </md-toolbar>
+            <a class="navlist" ng-repeat="item in todos" ng-click="vm.navegar(item.url)">
+               
+                <md-list-item class="md-1-line" ng-click="null">
+                    <div class="md-list-item-text" layout="column">
+                        <h3>{{ item.what }}</h3>
+                    </div>
+
+                </md-list-item>
+            </a>
+        </md-sidenav>
+        
+
+        </div>
+        
+        <div id="main">
+            <div ng-view></div>
+        </div>
+
+        <footer>
+            <div layout="column">
+                <div layout="row">
+                    <div flex="5"></div>
+                    <div layout="row" layout-xs="column" layout-sm="column" class="sobrecivica">
+                    <div layout="column">
+                        <h2>Sobre Civica</h2>
+                        <p>Somos una empresa especializada en proyectos ágiles de desarrollo de software para empresas.
+    Orientados al desarrollo web y a las soluciones de movilidad contamos con más de 10 años de experiencia colaborando con nuestros clientes.</p>
+                   <div layout="row" class="footer-content">
+                    <div layout="column" flex="65">
+                        <h2>Empresa</h2>
+                        <ul>
+                            <a href="#"><li>Sobre nosotros</li></a>
+                            <a href="#"><li>Metodología</li></a>
+                            <a href="#"><li>Tecnología</li></a>
+                        </ul>
+                    </div>
+                    <div layout="column" flex="65">
+                        <h2>Servicios</h2>
+                        <ul>
+                            <a href="#"><li>Desarrollo a medida</li></a>
+                            <a href="#"><li>Aplicaciones móviles</li></a>
+                            <a href="#"><li>Proyectos web</li></a>
+                        </ul>
+                    </div>
+                    <div layout="column" flex="65">
+                        <h2>Portafolio</h2>
+                        <ul>
+                            <a href="#"><li>Clientes</li></a>
+                            <a href="#"><li>Proyectos</li></a>
+                        </ul>
+                    </div>
+                    <div flex="35"></div>
+                </div>
+                <div layout="column">
+                   <div flex class="contacto">
+                        <p flex>CETIC - Granada C/ Periodista Fernando Gómez de la Cruz, 61 / Planta 1 - Oficina 5</p>
+                            <p flex>Teléfono: 958431780 &nbsp;&nbsp; / &nbsp;&nbsp;Móvil: 637783257</p>
+                   </div>
+                </div>
+                    </div>
+                    <div flex="15">
+                    </div>
+                    <div layout="column" class="container-mapa">
+                        <div ng-controller="MapController">
+                            <div flex="100" id="map"></div>
+                        </div>
+                        <div layout="row" class="social">
+                            <md-button class="md-fab md-warn" aria-label="Eat cake">
+                                <md-icon md-svg-src="img/icons/facebook-letter.svg"></md-icon>
+                            </md-button>
+                            <md-button class="md-fab md-warn" aria-label="Eat cake">
+                                <md-icon md-svg-src="img/icons/twitter-logo.svg"></md-icon>
+                            </md-button>
+                        </div>
+                    </div>
+                    <div flex="15">
+                    </div>
+                    </div>
+                </div>
+                <div layout="row">
+                    <h4 flex>Copyright Civica Soft &copy2017</h4>
+                </div>
+            </div>
+        </footer>
+    </body>
+</html>

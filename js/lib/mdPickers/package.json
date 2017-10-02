@@ -1,0 +1,66 @@
+{
+  "name": "mdPickers",
+  "version": "0.7.5",
+  "description": "Material Design date/time pickers for Angular Material",
+  "main": "index",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alenaksu/mdPickers.git"
+  },
+  "keywords": [
+    "material",
+    "design",
+    "angular",
+    "date",
+    "time",
+    "picker"
+  ],
+  "author": {
+    "name": "alenaksu"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/alenaksu/mdPickers/issues"
+  },
+  "homepage": "https://github.com/alenaksu/mdPickers",
+  "devDependencies": {
+    "gulp": "^3.9.0",
+    "gulp-autoprefixer": "^3.1.0",
+    "gulp-concat": "^2.6.0",
+    "gulp-less": "^3.0.5",
+    "gulp-cssnano": "^2.1.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-sourcemaps": "^1.6.0",
+    "gulp-uglify": "^1.5.1",
+    "gulp-wrap": "^0.11.0"
+  },
+  "gitHead": "7fad4fefd9ca735c846ab3f210fc64ffd25c8c3c",
+  "_id": "mdPickers@0.7.5",
+  "_shasum": "5f7fd3fbb0fabfebed47c69db0e4585ac2091b8c",
+  "_from": "mdPickers@*",
+  "_npmVersion": "3.10.6",
+  "_nodeVersion": "4.2.3",
+  "_npmUser": {
+    "name": "constantinez",
+    "email": "48130015q@gmail.com"
+  },
+  "dist": {
+    "shasum": "5f7fd3fbb0fabfebed47c69db0e4585ac2091b8c",
+    "tarball": "https://registry.npmjs.org/mdPickers/-/mdPickers-0.7.5.tgz"
+  },
+  "maintainers": [
+    {
+      "name": "constantinez",
+      "email": "48130015q@gmail.com"
+    }
+  ],
+  "_npmOperationalInternal": {
+    "host": "packages-12-west.internal.npmjs.com",
+    "tmp": "tmp/mdPickers-0.7.5.tgz_1474981245771_0.7145876097492874"
+  },
+  "directories": {},
+  "_resolved": "https://registry.npmjs.org/mdPickers/-/mdPickers-0.7.5.tgz"
+}

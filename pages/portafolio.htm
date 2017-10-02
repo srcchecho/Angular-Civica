@@ -1,0 +1,286 @@
+<div ng-controller="aboutCtrl" class="portafolio">
+    <div class="abouttitle">
+        <div><h1>PORTAFOLIO</h1></div>
+    </div>
+	<h2>Algunos de Nuestros Proyectos</h2>
+	<div layout="row" class="contenedor-Caracteristicas" layout-xs="column">
+		<div layout-sm="column" layout="row" layout-xs="column">
+        <md-card flex> 
+                        <md-card-header>
+                                <img src="./img/cerveza-bodega.jpg">
+                        </md-card-header>
+                        <md-card-title>
+                                <md-card-title-text>
+                                        <span class="md-headline">Gestión Cerveza de Bodega - Hijos de Rivera S.A.</span>
+                                </md-card-title-text>
+                        </md-card-title>
+                        <md-card-content>
+                                <p>
+                                Herramienta de gestión del proceso de llenado, distribución y reparto de cerveza de bodega mediante camiones cisterna
+                                </p>
+                        </md-card-content>
+                        <md-card-actions layout="row" layout-align="end center">
+                                <md-button>Ver Más</md-button>
+                        </md-card-actions>
+                </md-card>
+                <md-card flex> 
+                        <md-card-header>
+                                <img src="./img/fichaAeroparkingBarcelona.jpg">
+                        </md-card-header>
+                        <md-card-title>
+                                <md-card-title-text>
+                                        <span class="md-headline">Gestión Cerveza de Bodega - Hijos de Rivera S.A.</span>
+                                </md-card-title-text>
+                        </md-card-title>
+                        <md-card-content>
+                                <p>
+                                Desde el inicio del proyecto contará con una atención cercana y unos resultados predecibles. Sin sorpresas ni costes ocultos, creamos soluciones que funcionan, en los plazos acordados.
+                                </p>
+                        </md-card-content>
+                        <md-card-actions layout="row" layout-align="end center">
+                                <md-button>Ver Más</md-button>
+                        </md-card-actions>
+                </md-card>
+		</div>
+		<div layout-sm="column" layout="row" layout-xs="column">
+                <md-card flex> 
+                        <md-card-header>
+                                <img src="./img/secretosdegranada.jpg">
+                        </md-card-header>
+                        <md-card-title>
+                                <md-card-title-text>
+                                        <span class="md-headline">Gestión Cerveza de Bodega - Hijos de Rivera S.A.</span>
+                                </md-card-title-text>
+                        </md-card-title>
+                        <md-card-content>
+                                <p>
+                                Desde el inicio del proyecto contará con una atención cercana y unos resultados predecibles. Sin sorpresas ni costes ocultos, creamos soluciones que funcionan, en los plazos acordados.
+                                </p>
+                        </md-card-content>
+                        <md-card-actions layout="row" layout-align="end center">
+                                <md-button>Ver Más</md-button>
+                        </md-card-actions>
+                </md-card>
+                <md-card flex> 
+                        <md-card-header>
+                                <img src="./img/gestion-averias.jpg">
+                        </md-card-header>
+                        <md-card-title>
+                                <md-card-title-text>
+                                        <span class="md-headline">Gestión Cerveza de Bodega - Hijos de Rivera S.A.</span>
+                                </md-card-title-text>
+                        </md-card-title>
+                        <md-card-content>
+                                <p>
+                                Desde el inicio del proyecto contará con una atención cercana y unos resultados predecibles. Sin sorpresas ni costes ocultos, creamos soluciones que funcionan, en los plazos acordados.
+                                </p>
+                        </md-card-content>
+                        <md-card-actions layout="row" layout-align="end center">
+                                <md-button>Ver Más</md-button>
+                        </md-card-actions>
+                </md-card>
+		</div>
+	</div>
+	<div class="presupuesto">
+                <div layout="row">
+                        <div class="wow fadeIn container-presupuesto" data-wow-delay="0.15s">
+                                <h2><strong>Pídenos <span>presupuesto sin compromiso<span></strong></h2>
+                                <div layout="column" class="formulario">
+                                        <div>
+                                                <md-input-container class="md-block">
+                                                        <label>Email</label>
+                                                        <input required type="email" name="clientEmail" ng-model="project.clientEmail"
+                                                        minlength="10" maxlength="100" ng-pattern="/^.+@.+\..+$/" />
+
+                                                        <div ng-messages="projectForm.clientEmail.$error" role="alert">
+                                                        <div ng-message-exp="['required', 'minlength', 'maxlength', 'pattern']" class="msgadv">
+                                                        Tu email debe contener entre 10 y 100 caracteres y ser un email valido.
+                                                        </div>
+                                                        </div>
+                                                </md-input-container>
+                                        </div>
+                                        <div>
+                                                <md-input-container class="md-block">
+                                                        <label>Descripcion</label>
+                                                        <textarea ng-model="user.biography" md-maxlength="150" rows="4" md-select-on-focus></textarea>
+                                                </md-input-container>
+                                        </div>
+                                        <div>
+                                                <md-button class="md-raised">Enviar</md-button>
+                                        </div>
+                                </div>
+                        </div>
+                </div>
+        </div>
+	<h2 class="separacion">Algunos de Nuestros Clientes</h2>
+	<div layout="column" class="contenedor-Clientes">
+		<div layout="row" layout-sm="column" layout="row" layout-xs="column">
+        <md-card flex> 
+                        <md-card-header>
+                                <img src="./img/HijosRivera.jpg">
+                        </md-card-header>
+                        <md-card-title>
+                                <md-card-title-text>
+                                        <span class="md-headline">Hijos de Rivera</span>
+                                </md-card-title-text>
+                        </md-card-title>
+                        <md-card-content>
+                                <p>
+                                Herramienta de gestión del proceso de llenado, distribución y reparto de cerveza de bodega mediante camiones cisterna
+                                </p>
+                        </md-card-content>
+                        <md-card-actions layout="row" layout-align="end center">
+                                <md-button>Ver Más</md-button>
+                        </md-card-actions>
+                </md-card>
+                <md-card flex> 
+                        <md-card-header>
+                                <img src="./img/CajaGranada.jpg">
+                        </md-card-header>
+                        <md-card-title>
+                                <md-card-title-text>
+                                        <span class="md-headline">Gestión Cerveza de Bodega - Hijos de Rivera S.A.</span>
+                                </md-card-title-text>
+                        </md-card-title>
+                        <md-card-content>
+                                <p>
+                                Desde el inicio del proyecto contará con una atención cercana y unos resultados predecibles. Sin sorpresas ni costes ocultos, creamos soluciones que funcionan, en los plazos acordados.
+                                </p>
+                        </md-card-content>
+                        <md-card-actions layout="row" layout-align="end center">
+                                <md-button>Ver Más</md-button>
+                        </md-card-actions>
+                </md-card>
+                <md-card flex> 
+                        <md-card-header>
+                                <img src="./img/Ugr.jpg">
+                        </md-card-header>
+                        <md-card-title>
+                                <md-card-title-text>
+                                        <span class="md-headline">Gestión Cerveza de Bodega - Hijos de Rivera S.A.</span>
+                                </md-card-title-text>
+                        </md-card-title>
+                        <md-card-content>
+                                <p>
+                                Desde el inicio del proyecto contará con una atención cercana y unos resultados predecibles. Sin sorpresas ni costes ocultos, creamos soluciones que funcionan, en los plazos acordados.
+                                </p>
+                        </md-card-content>
+                        <md-card-actions layout="row" layout-align="end center">
+                                <md-button>Ver Más</md-button>
+                        </md-card-actions>
+                </md-card>
+		</div>
+		<div layout="row" layout-sm="column" layout="row" layout-xs="column">
+                <md-card flex> 
+                        <md-card-header>
+                                <img src="./img/Dhul.jpg">
+                        </md-card-header>
+                        <md-card-title>
+                                <md-card-title-text>
+                                        <span class="md-headline">Gestión Cerveza de Bodega - Hijos de Rivera S.A.</span>
+                                </md-card-title-text>
+                        </md-card-title>
+                        <md-card-content>
+                                <p>
+                                Desde el inicio del proyecto contará con una atención cercana y unos resultados predecibles. Sin sorpresas ni costes ocultos, creamos soluciones que funcionan, en los plazos acordados.
+                                </p>
+                        </md-card-content>
+                        <md-card-actions layout="row" layout-align="end center">
+                                <md-button>Ver Más</md-button>
+                        </md-card-actions>
+                </md-card>
+				<md-card flex> 
+                        <md-card-header>
+                                <img src="./img/Herogra.jpg">
+                        </md-card-header>
+                        <md-card-title>
+                                <md-card-title-text>
+                                        <span class="md-headline">Gestión Cerveza de Bodega - Hijos de Rivera S.A.</span>
+                                </md-card-title-text>
+                        </md-card-title>
+                        <md-card-content>
+                                <p>
+                                Desde el inicio del proyecto contará con una atención cercana y unos resultados predecibles. Sin sorpresas ni costes ocultos, creamos soluciones que funcionan, en los plazos acordados.
+                                </p>
+                        </md-card-content>
+                        <md-card-actions layout="row" layout-align="end center">
+                                <md-button>Ver Más</md-button>
+                        </md-card-actions>
+                </md-card>
+				<md-card flex> 
+                        <md-card-header>
+                                <img src="./img/Clesa.jpg">
+                        </md-card-header>
+                        <md-card-title>
+                                <md-card-title-text>
+                                        <span class="md-headline">Gestión Cerveza de Bodega - Hijos de Rivera S.A.</span>
+                                </md-card-title-text>
+                        </md-card-title>
+                        <md-card-content>
+                                <p>
+                                Desde el inicio del proyecto contará con una atención cercana y unos resultados predecibles. Sin sorpresas ni costes ocultos, creamos soluciones que funcionan, en los plazos acordados.
+                                </p>
+                        </md-card-content>
+                        <md-card-actions layout="row" layout-align="end center">
+                                <md-button>Ver Más</md-button>
+                        </md-card-actions>
+                </md-card>
+		</div>
+		<div layout="row" layout-sm="column" layout="row" layout-xs="column">
+                <md-card flex> 
+                        <md-card-header>
+                                <img src="./img/Albolote.jpg">
+                        </md-card-header>
+                        <md-card-title>
+                                <md-card-title-text>
+                                        <span class="md-headline">Gestión Cerveza de Bodega - Hijos de Rivera S.A.</span>
+                                </md-card-title-text>
+                        </md-card-title>
+                        <md-card-content>
+                                <p>
+                                Desde el inicio del proyecto contará con una atención cercana y unos resultados predecibles. Sin sorpresas ni costes ocultos, creamos soluciones que funcionan, en los plazos acordados.
+                                </p>
+                        </md-card-content>
+                        <md-card-actions layout="row" layout-align="end center">
+                                <md-button>Ver Más</md-button>
+                        </md-card-actions>
+                </md-card>
+				<md-card flex> 
+                        <md-card-header>
+                                <img src="./img/Aeroparking.jpg">
+                        </md-card-header>
+                        <md-card-title>
+                                <md-card-title-text>
+                                        <span class="md-headline">Gestión Cerveza de Bodega - Hijos de Rivera S.A.</span>
+                                </md-card-title-text>
+                        </md-card-title>
+                        <md-card-content>
+                                <p>
+                                Desde el inicio del proyecto contará con una atención cercana y unos resultados predecibles. Sin sorpresas ni costes ocultos, creamos soluciones que funcionan, en los plazos acordados.
+                                </p>
+                        </md-card-content>
+                        <md-card-actions layout="row" layout-align="end center">
+                                <md-button>Ver Más</md-button>
+                        </md-card-actions>
+                </md-card>
+				<md-card flex> 
+                        <md-card-header>
+                                <img src="./img/Rentrucks.jpg">
+                        </md-card-header>
+                        <md-card-title>
+                                <md-card-title-text>
+                                        <span class="md-headline">Gestión Cerveza de Bodega - Hijos de Rivera S.A.</span>
+                                </md-card-title-text>
+                        </md-card-title>
+                        <md-card-content>
+                                <p>
+                                Desde el inicio del proyecto contará con una atención cercana y unos resultados predecibles. Sin sorpresas ni costes ocultos, creamos soluciones que funcionan, en los plazos acordados.
+                                </p>
+                        </md-card-content>
+                        <md-card-actions layout="row" layout-align="end center">
+                                <md-button>Ver Más</md-button>
+                        </md-card-actions>
+                </md-card>
+		</div>
+	</div>
+</div> 

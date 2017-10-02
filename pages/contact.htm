@@ -1,0 +1,67 @@
+<div ng-controller="contactCtrl" class="contacto">
+    <div class="abouttitle">
+        <div><h1>CONTACTO</h1></div>
+    </div>
+	<div layout="row" layout-sm="column" layout-xs="column" class="separacion">
+		<div flex="15"></div>
+		<div layout="column" flex>
+			<h2>¿Dónde estamos?</h2>
+			<div ng-controller="MapController" class="contacto-mapa">
+				<div flex="100" id="map"></div>
+			</div>
+			<div layout="row" class="direccion">
+				<div>
+					<h2>Dirección</h2>
+					<p>
+						CETIC - UGR<br>
+		C/ Periodista Fernando Gómez de la Cruz, 61 Planta 1 - Oficina 5<br>
+		Granada, Granada 18014 España
+					</p>
+				</div>
+				<div flex="15"></div>
+				<div>
+					<h2>Llámanos/Escríbenos</h2>
+					<p>
+						Teléfono: 958431780<br>
+		E-mail: info@civica-soft.com<br>
+		Nuestro horario es de 7:30 a 15:00 horas, de lunes a viernes
+					</p>
+				</div>
+			</div>
+		</div>
+		<div layout="column" flex>
+			<div class="wow fadeIn" data-wow-delay="0.15s">
+                                <h2>Formulario de Contacto</h2>
+                                <form layout="column" class="formulario" ng-submit="submit(email + ' ' + msg)">
+                                        <div>
+                                                <md-input-container class="md-block">
+                                                        <label>Email</label>
+                                                        <input required type="email" name="clientEmail" ng-model="email"
+                                                        minlength="10" maxlength="100" ng-pattern="/^.+@.+\..+$/"/>
+
+                                                        <div ng-messages="projectForm.clientEmail.$error" role="alert">
+                                                        <div ng-message-exp="['required', 'minlength', 'maxlength', 'pattern']" class="msgadv">
+                                                        Tu email debe contener entre 10 y 100 caracteres y ser un email valido.
+                                                        </div>
+                                                        </div>
+                                                </md-input-container>
+                                        </div>
+                                        <div>
+                                                <md-input-container class="md-block">
+                                                        <label>Descripcion</label>
+                                                        <textarea ng-model="msg" md-maxlength="150" rows="4" md-select-on-focus></textarea>
+                                                </md-input-container>
+                                        </div>
+                                        <div layout="row">
+											<div flex></div>
+                                                <md-button class="md-raised" type="submit">Enviar</md-button>
+                                        </div>
+                                </form>
+                        </div>
+		</div>
+		<div flex="15"></div>
+	</div>
+	<div class="row" ng-repeat="prof in vm.albums">
+		<p>{{prof.nombre}}</p>
+	</div>
+</div>
